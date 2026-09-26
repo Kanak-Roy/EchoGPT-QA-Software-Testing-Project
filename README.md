@@ -116,8 +116,8 @@ This repository includes QA deliverables such as:
 
 * Functional Test Cases
 * Bug Reports
-* Exploratory Testing Report
 * UI/UX Review
+* Exploratory Testing Report
 
 ## 👤 QA Contribution
 
