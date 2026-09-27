@@ -2,36 +2,58 @@
 
 ## 📌 Project Overview
 
-This repository contains a comprehensive **Quality Assurance (QA) and Software Testing project** for **EchoGPT**, covering its Chrome Extension **EchoGPT – Multi-AI Chat Sidebar** and Android application **EchoChat**.
+This repository contains a comprehensive **QA and Software Testing project** for **EchoGPT – Multi-AI Chat Sidebar** and its Android application **EchoChat**.
 
-The project focuses on validating core functionality, identifying defects, exploring real-world user scenarios, and reviewing the overall UI/UX experience.
+The project covers **Functional Testing, API Testing, Exploratory Testing, Bug Reporting, and UI/UX Review** to validate application functionality, API behavior, usability, reliability, and overall user experience.
 
 ## 🧪 Testing Activities
 
 ### 1. Functional Testing
 
-Functional test cases were created to verify important application features, including:
+* Designed and executed functional test cases
+* Tested authentication and account creation
+* Tested chat functionality
+* Tested screenshot and file attachment features
+* Tested chat history and account management
+* Tested navigation, input validation, and application behavior
 
-* Chrome extension launch
-* Welcome page and navigation
-* Account creation
-* Email authentication
-* Verification code functionality
-* Google sign-in
-* Chat functionality
-* Screenshot functionality
-* File attachment
-* Read a page/file functionality
-* Settings and account features
-* Chat history
-* Theme functionality
-* Account deletion
+### 2. API Testing
 
-Test cases include **preconditions, test steps, expected results, actual results, and execution status**.
+API testing was performed using **Postman**.
 
-### 2. Bug Reporting
+Tested API functionality including:
 
-Identified defects were documented with:
+* Authentication information
+* Chat/question generation
+* Chat history retrieval
+* Single conversation deletion
+* Delete-all conversations
+* Bearer token authentication
+* Environment variables and request configuration
+
+The Postman collection contains requests for endpoints such as `/auth/info`, `/v1/chat/generate`, `/v1/chat/history`, `/v1/chat/delete`, and `/v1/chat/delete-all`.
+
+### 3. Exploratory Testing
+
+Performed exploratory testing beyond predefined test cases, focusing on:
+
+* Edge cases
+* Unexpected user behavior
+* Input validation
+* Error handling
+* Navigation
+* Loading states
+* Application stability
+* Special characters and emojis
+* Long inputs
+* Multiple browser tabs
+* Application reopening
+
+Testing was performed on both the **Chrome Extension and Android application**.
+
+### 4. Bug Reporting
+
+Identified and documented defects with:
 
 * Bug ID
 * Title
@@ -41,84 +63,66 @@ Identified defects were documented with:
 * Actual result
 * Severity
 * Priority
-* Test environment
-* Supporting screenshots/screen recordings
+* Environment
+* Screenshots and screen recordings
 
-Examples of identified issues include an incorrect **"First name is required"** validation message, unexpected Google sign-in behavior, verification codes being delivered to the spam folder, screenshot viewing issues, and a non-functional search option.
+Examples include authentication validation issues, Google sign-in behavior, email verification delivery, screenshot functionality, and search functionality.
 
-### 3. Exploratory Testing
+### 5. UI/UX Review
 
-Exploratory testing was performed beyond predefined functional test cases, focusing on:
-
-* Usability
-* Unexpected user actions
-* Edge cases
-* Error handling
-* Input validation
-* Navigation
-* Application stability
-* Loading and error states
-
-Testing covered both the Chrome Extension and Android application, including special characters, emojis, long inputs, multiple browser tabs, page refresh, application reopening, chat history, and account management.
-
-### 4. UI/UX Review
-
-A UI/UX review was conducted to identify opportunities for improving:
+Reviewed the application's UI/UX and provided improvement suggestions related to:
 
 * Welcome page layout
-* Sign-in and account creation flow
+* Sign-in flow
 * Sidebar responsiveness
-* Branding consistency between EchoGPT and EchoChat
+* Branding consistency
 * Dashboard layout
 * Settings and account navigation
-* File reading controls
-* Theme settings
-* Delete confirmation popup placement
+* File reading functionality
+* Theme options
+* Delete confirmation popup
 * Back navigation
 
-The review provides practical suggestions aimed at improving usability, consistency, and overall user experience.
+## 🛠️ Tools & Technologies
+
+* **Postman** – API Testing
+* **Google Chrome** – Browser/Extension Testing
+* **Android** – Mobile Application Testing
+* **Manual Testing** – Functional & Exploratory Testing
+* **GitHub** – Test documentation and project management
 
 ## 📊 Testing Scope
 
-| Testing Type               | Coverage                                |
-| -------------------------- | --------------------------------------- |
-| Functional Testing         | Core features and user workflows        |
-| Exploratory Testing        | Edge cases and unexpected user behavior |
-| Regression-Oriented Checks | Previously identified functionality     |
-| Bug Reporting              | Defect documentation and evidence       |
-| UI/UX Review               | Usability and interface improvements    |
-| Cross-Platform Testing     | Chrome Extension & Android Application  |
-
-## 🛠️ Testing Environment
-
-* **Platform:** Chrome Browser / Android
-* **Chrome Version:** 154.0.8037.58
-* **Application:** EchoGPT – Multi-AI Chat Sidebar
-* **Mobile Application:** EchoChat
-* **Testing Approach:** Manual Testing
-
-## 🎯 Key QA Focus Areas
-
-* Functional correctness
-* Authentication and account flows
-* User input validation
-* Chat functionality
-* Navigation and usability
-* Error handling
-* Edge-case behavior
-* Cross-platform consistency
-* UI/UX quality
-* Defect identification and documentation
+| Testing Type           | Coverage                               |
+| ---------------------- | -------------------------------------- |
+| Functional Testing     | Core application features              |
+| API Testing            | REST API endpoints and authentication  |
+| Exploratory Testing    | Edge cases and unexpected behavior     |
+| Bug Reporting          | Defect documentation and evidence      |
+| UI/UX Testing          | Usability and interface review         |
+| Cross-Platform Testing | Chrome Extension & Android Application |
 
 ## 📁 Project Deliverables
 
-This repository includes QA deliverables such as:
-
 * Functional Test Cases
 * Bug Reports
-* UI/UX Review
 * Exploratory Testing Report
+* UI/UX Review
+* API Testing Collection
+* Postman Environment
+
+## 🎯 QA Focus Areas
+
+* Functional correctness
+* API behavior and authentication
+* User input validation
+* Chat functionality
+* Error handling
+* Edge-case testing
+* Navigation and usability
+* Cross-platform consistency
+* Defect identification and documentation
 
 ## 👤 QA Contribution
 
-This project demonstrates practical experience in **manual software testing**, including test case design, test execution, exploratory testing, defect reporting, usability review, and documenting reproducible issues with appropriate evidence.
+This project demonstrates practical experience in **Manual Software Testing and API Testing**, including test case design, test execution, API testing with Postman, exploratory testing, defect reporting, UI/UX review, and documenting reproducible issues with supporting evidence.

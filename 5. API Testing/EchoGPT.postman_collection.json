@@ -1,0 +1,410 @@
+{
+  "info": {
+    "_postman_id": "2863153a-2e76-414e-ab95-2b3e282a7db5",
+    "name": "EchoGPT",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57640558",
+    "_collection_link": "https://go.postman.co/collection/57640558-2863153a-2e76-414e-ab95-2b3e282a7db5?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Auth Info",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.echogpt.live/auth/info",
+          "protocol": "https",
+          "host": [
+            "api",
+            "echogpt",
+            "live"
+          ],
+          "path": [
+            "auth",
+            "info"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Ask Question",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "accept",
+            "value": "*/*"
+          },
+          {
+            "key": "accept-language",
+            "value": "en-US,en;q=0.9"
+          },
+          {
+            "key": "authorization",
+            "value": "{{bearer_token_0wyn}}wZGF0ZWRBdCI6IjIwMjYtMDktMjRUMDk6MDU6MzkuNTQwWiJ9LCJpYXQiOjE3OTAyNDA3NDAsImV4cCI6MTc5MjgzMjc0MH0.FtEp3-F_uHySnrx2q27ekf1MRFcihg-_f0FMdR4M-V4"
+          },
+          {
+            "key": "cache-control",
+            "value": "no-cache"
+          },
+          {
+            "key": "content-type",
+            "value": "application/json"
+          },
+          {
+            "key": "origin",
+            "value": "chrome-extension://negimdcamohmoheiifgecbjgjepkcfhj"
+          },
+          {
+            "key": "pragma",
+            "value": "no-cache"
+          },
+          {
+            "key": "priority",
+            "value": "u=1, i"
+          },
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Chromium\";v=\"154\", \"Google Chrome\";v=\"154\", \"Not A^(Brand\";v=\"99\""
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0"
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"Windows\""
+          },
+          {
+            "key": "sec-fetch-dest",
+            "value": "empty"
+          },
+          {
+            "key": "sec-fetch-mode",
+            "value": "cors"
+          },
+          {
+            "key": "sec-fetch-site",
+            "value": "none"
+          },
+          {
+            "key": "sec-fetch-storage-access",
+            "value": "active"
+          },
+          {
+            "key": "user-agent",
+            "value": "Mozilla/5.0 ^(Windows NT 10.0; Win64; x64^) AppleWebKit/537.36 ^(KHTML, like Gecko^) Chrome/154.0.0.0 Safari/537.36"
+          },
+          {
+            "key": "Cookie",
+            "value": "EchoGPT-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoYW5kYXJveTEzMjZAZ21haWwuY29tIiwic3ViIjp7ImVtYWlsIjoic2hhbmRhcm95MTMyNkBnbWFpbC5jb20iLCJnb29nbGVJZCI6IjExMTk5NzU0NTQwMDg3OTM4OTU5NyIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMM25jMGZUUDFCWVlkX0dncFVMeEQ3RUU4Qm51SGd0SDVwbkhkREtyM1d2QmFoVEE9czk2LWMiLCJmaXJzdE5hbWUiOiJTaGFuZGEiLCJsYXN0TmFtZSI6IlJveSIsInN0YXR1cyI6ImFjdGl2ZSIsImdpdGh1YklkIjpudWxsLCJkaXNjY29yZElkIjpudWxsLCJ1c2VybmFtZSI6bnVsbCwiZGlzcGxheU5hbWUiOm51bGwsInN1YnNjcmlwdGlvbkV4cGlyYXRpb25EYXRlIjpudWxsLCJxdW90YVdpbmRvd1N0YXJ0IjpudWxsLCJjb21wYXJlV2luZG93U3RhcnQiOm51bGwsImlkIjoiYTk5NGIzZGEtZDA4Ny00YWVmLTgzNDQtMjM0NTU1MTIzMDBjIiwib2F1dGhQcm92aWRlcnMiOltdLCJpc1ByZW1pdW0iOiIwIiwic3Vic2NyaXB0aW9uSWQiOiIwIiwic3Vic2NyaXB0aW9uU3RhdHVzIjowLCJwcmVtaXVtTGltaXQiOjAsImZyZWVMaW1pdCI6MCwicXVvdGFVc2VkIjowLCJxdW90YUFkdmFuY2VkVXNlZCI6MCwiY29tcGFyZVVzZWQiOjAsInR3aXR0ZXJJZCI6IiIsImFwcGxlSWQiOiIiLCJkZXZpY2VUb2tlbiI6W10sImNyZWF0ZWRBdCI6IjIwMjYtMDktMjRUMDk6MDU6MzkuNTQwWiIsInVwZGF0ZWRBdCI6IjIwMjYtMDktMjRUMDk6MDU6MzkuNTQwWiJ9LCJpYXQiOjE3OTAyNDA3NDAsImV4cCI6MTc5MjgzMjc0MH0.FtEp3-F_uHySnrx2q27ekf1MRFcihg-_f0FMdR4M-V4"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"messageId\": \"msg_1790517144632\",\r\n    \"message\": \"Tell me an interesting fun fact\",\r\n    \"chatId\": \"c9233605-045d-45d7-baef-de69030580f8\",\r\n    \"model\": \"echogpt\",\r\n    \"stream\": false\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api.echogpt.live/v1/chat/generate",
+          "protocol": "https",
+          "host": [
+            "api",
+            "echogpt",
+            "live"
+          ],
+          "path": [
+            "v1",
+            "chat",
+            "generate"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "History",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "accept",
+            "value": "*/*"
+          },
+          {
+            "key": "accept-language",
+            "value": "en-US,en;q=0.9"
+          },
+          {
+            "key": "authorization",
+            "value": "{{bearer_token_0wyn}}wZGF0ZWRBdCI6IjIwMjYtMDktMjRUMDk6MDU6MzkuNTQwWiJ9LCJpYXQiOjE3OTAyNDA3NDAsImV4cCI6MTc5MjgzMjc0MH0.FtEp3-F_uHySnrx2q27ekf1MRFcihg-_f0FMdR4M-V4"
+          },
+          {
+            "key": "cache-control",
+            "value": "no-cache"
+          },
+          {
+            "key": "pragma",
+            "value": "no-cache"
+          },
+          {
+            "key": "priority",
+            "value": "u=1, i"
+          },
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Chromium\";v=\"154\", \"Google Chrome\";v=\"154\", \"Not A^(Brand\";v=\"99\""
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0"
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"Windows\""
+          },
+          {
+            "key": "sec-fetch-dest",
+            "value": "empty"
+          },
+          {
+            "key": "sec-fetch-mode",
+            "value": "cors"
+          },
+          {
+            "key": "sec-fetch-site",
+            "value": "none"
+          },
+          {
+            "key": "sec-fetch-storage-access",
+            "value": "active"
+          },
+          {
+            "key": "user-agent",
+            "value": "Mozilla/5.0 ^(Windows NT 10.0; Win64; x64^) AppleWebKit/537.36 ^(KHTML, like Gecko^) Chrome/154.0.0.0 Safari/537.36"
+          },
+          {
+            "key": "Cookie",
+            "value": "EchoGPT-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoYW5kYXJveTEzMjZAZ21haWwuY29tIiwic3ViIjp7ImVtYWlsIjoic2hhbmRhcm95MTMyNkBnbWFpbC5jb20iLCJnb29nbGVJZCI6IjExMTk5NzU0NTQwMDg3OTM4OTU5NyIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMM25jMGZUUDFCWVlkX0dncFVMeEQ3RUU4Qm51SGd0SDVwbkhkREtyM1d2QmFoVEE9czk2LWMiLCJmaXJzdE5hbWUiOiJTaGFuZGEiLCJsYXN0TmFtZSI6IlJveSIsInN0YXR1cyI6ImFjdGl2ZSIsImdpdGh1YklkIjpudWxsLCJkaXNjY29yZElkIjpudWxsLCJ1c2VybmFtZSI6bnVsbCwiZGlzcGxheU5hbWUiOm51bGwsInN1YnNjcmlwdGlvbkV4cGlyYXRpb25EYXRlIjpudWxsLCJxdW90YVdpbmRvd1N0YXJ0IjpudWxsLCJjb21wYXJlV2luZG93U3RhcnQiOm51bGwsImlkIjoiYTk5NGIzZGEtZDA4Ny00YWVmLTgzNDQtMjM0NTU1MTIzMDBjIiwib2F1dGhQcm92aWRlcnMiOltdLCJpc1ByZW1pdW0iOiIwIiwic3Vic2NyaXB0aW9uSWQiOiIwIiwic3Vic2NyaXB0aW9uU3RhdHVzIjowLCJwcmVtaXVtTGltaXQiOjAsImZyZWVMaW1pdCI6MCwicXVvdGFVc2VkIjowLCJxdW90YUFkdmFuY2VkVXNlZCI6MCwiY29tcGFyZVVzZWQiOjAsInR3aXR0ZXJJZCI6IiIsImFwcGxlSWQiOiIiLCJkZXZpY2VUb2tlbiI6W10sImNyZWF0ZWRBdCI6IjIwMjYtMDktMjRUMDk6MDU6MzkuNTQwWiIsInVwZGF0ZWRBdCI6IjIwMjYtMDktMjRUMDk6MDU6MzkuNTQwWiJ9LCJpYXQiOjE3OTAyNDA3NDAsImV4cCI6MTc5MjgzMjc0MH0.FtEp3-F_uHySnrx2q27ekf1MRFcihg-_f0FMdR4M-V4"
+          }
+        ],
+        "url": {
+          "raw": "https://api.echogpt.live/v1/chat/history",
+          "protocol": "https",
+          "host": [
+            "api",
+            "echogpt",
+            "live"
+          ],
+          "path": [
+            "v1",
+            "chat",
+            "history"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Single Conversation",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "accept",
+            "value": "*/*"
+          },
+          {
+            "key": "accept-language",
+            "value": "en-US,en;q=0.9"
+          },
+          {
+            "key": "authorization",
+            "value": "{{bearer_token_0wyn}}wZGF0ZWRBdCI6IjIwMjYtMDktMjRUMDk6MDU6MzkuNTQwWiJ9LCJpYXQiOjE3OTAyNDA3NDAsImV4cCI6MTc5MjgzMjc0MH0.FtEp3-F_uHySnrx2q27ekf1MRFcihg-_f0FMdR4M-V4"
+          },
+          {
+            "key": "cache-control",
+            "value": "no-cache"
+          },
+          {
+            "key": "origin",
+            "value": "chrome-extension://negimdcamohmoheiifgecbjgjepkcfhj"
+          },
+          {
+            "key": "pragma",
+            "value": "no-cache"
+          },
+          {
+            "key": "priority",
+            "value": "u=1, i"
+          },
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Chromium\";v=\"154\", \"Google Chrome\";v=\"154\", \"Not A^(Brand\";v=\"99\""
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0"
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"Windows\""
+          },
+          {
+            "key": "sec-fetch-dest",
+            "value": "empty"
+          },
+          {
+            "key": "sec-fetch-mode",
+            "value": "cors"
+          },
+          {
+            "key": "sec-fetch-site",
+            "value": "none"
+          },
+          {
+            "key": "sec-fetch-storage-access",
+            "value": "active"
+          },
+          {
+            "key": "user-agent",
+            "value": "Mozilla/5.0 ^(Windows NT 10.0; Win64; x64^) AppleWebKit/537.36 ^(KHTML, like Gecko^) Chrome/154.0.0.0 Safari/537.36"
+          },
+          {
+            "key": "Cookie",
+            "value": "EchoGPT-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoYW5kYXJveTEzMjZAZ21haWwuY29tIiwic3ViIjp7ImVtYWlsIjoic2hhbmRhcm95MTMyNkBnbWFpbC5jb20iLCJnb29nbGVJZCI6IjExMTk5NzU0NTQwMDg3OTM4OTU5NyIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMM25jMGZUUDFCWVlkX0dncFVMeEQ3RUU4Qm51SGd0SDVwbkhkREtyM1d2QmFoVEE9czk2LWMiLCJmaXJzdE5hbWUiOiJTaGFuZGEiLCJsYXN0TmFtZSI6IlJveSIsInN0YXR1cyI6ImFjdGl2ZSIsImdpdGh1YklkIjpudWxsLCJkaXNjY29yZElkIjpudWxsLCJ1c2VybmFtZSI6bnVsbCwiZGlzcGxheU5hbWUiOm51bGwsInN1YnNjcmlwdGlvbkV4cGlyYXRpb25EYXRlIjpudWxsLCJxdW90YVdpbmRvd1N0YXJ0IjpudWxsLCJjb21wYXJlV2luZG93U3RhcnQiOm51bGwsImlkIjoiYTk5NGIzZGEtZDA4Ny00YWVmLTgzNDQtMjM0NTU1MTIzMDBjIiwib2F1dGhQcm92aWRlcnMiOltdLCJpc1ByZW1pdW0iOiIwIiwic3Vic2NyaXB0aW9uSWQiOiIwIiwic3Vic2NyaXB0aW9uU3RhdHVzIjowLCJwcmVtaXVtTGltaXQiOjAsImZyZWVMaW1pdCI6MCwicXVvdGFVc2VkIjowLCJxdW90YUFkdmFuY2VkVXNlZCI6MCwiY29tcGFyZVVzZWQiOjAsInR3aXR0ZXJJZCI6IiIsImFwcGxlSWQiOiIiLCJkZXZpY2VUb2tlbiI6W10sImNyZWF0ZWRBdCI6IjIwMjYtMDktMjRUMDk6MDU6MzkuNTQwWiIsInVwZGF0ZWRBdCI6IjIwMjYtMDktMjRUMDk6MDU6MzkuNTQwWiJ9LCJpYXQiOjE3OTAyNDA3NDAsImV4cCI6MTc5MjgzMjc0MH0.FtEp3-F_uHySnrx2q27ekf1MRFcihg-_f0FMdR4M-V4"
+          }
+        ],
+        "url": {
+          "raw": "https://api.echogpt.live/v1/chat/delete/c9233605-045d-45d7-baef-de69030580f8",
+          "protocol": "https",
+          "host": [
+            "api",
+            "echogpt",
+            "live"
+          ],
+          "path": [
+            "v1",
+            "chat",
+            "delete",
+            "c9233605-045d-45d7-baef-de69030580f8"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete All",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "accept",
+            "value": "*/*"
+          },
+          {
+            "key": "accept-language",
+            "value": "en-US,en;q=0.9"
+          },
+          {
+            "key": "authorization",
+            "value": "{{bearer_token_0wyn}}wZGF0ZWRBdCI6IjIwMjYtMDktMjRUMDk6MDU6MzkuNTQwWiJ9LCJpYXQiOjE3OTAyNDA3NDAsImV4cCI6MTc5MjgzMjc0MH0.FtEp3-F_uHySnrx2q27ekf1MRFcihg-_f0FMdR4M-V4"
+          },
+          {
+            "key": "cache-control",
+            "value": "no-cache"
+          },
+          {
+            "key": "origin",
+            "value": "chrome-extension://negimdcamohmoheiifgecbjgjepkcfhj"
+          },
+          {
+            "key": "pragma",
+            "value": "no-cache"
+          },
+          {
+            "key": "priority",
+            "value": "u=1, i"
+          },
+          {
+            "key": "sec-ch-ua",
+            "value": "\"Chromium\";v=\"154\", \"Google Chrome\";v=\"154\", \"Not A^(Brand\";v=\"99\""
+          },
+          {
+            "key": "sec-ch-ua-mobile",
+            "value": "?0"
+          },
+          {
+            "key": "sec-ch-ua-platform",
+            "value": "\"Windows\""
+          },
+          {
+            "key": "sec-fetch-dest",
+            "value": "empty"
+          },
+          {
+            "key": "sec-fetch-mode",
+            "value": "cors"
+          },
+          {
+            "key": "sec-fetch-site",
+            "value": "none"
+          },
+          {
+            "key": "sec-fetch-storage-access",
+            "value": "active"
+          },
+          {
+            "key": "user-agent",
+            "value": "Mozilla/5.0 ^(Windows NT 10.0; Win64; x64^) AppleWebKit/537.36 ^(KHTML, like Gecko^) Chrome/154.0.0.0 Safari/537.36"
+          },
+          {
+            "key": "Cookie",
+            "value": "EchoGPT-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoYW5kYXJveTEzMjZAZ21haWwuY29tIiwic3ViIjp7ImVtYWlsIjoic2hhbmRhcm95MTMyNkBnbWFpbC5jb20iLCJnb29nbGVJZCI6IjExMTk5NzU0NTQwMDg3OTM4OTU5NyIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NMM25jMGZUUDFCWVlkX0dncFVMeEQ3RUU4Qm51SGd0SDVwbkhkREtyM1d2QmFoVEE9czk2LWMiLCJmaXJzdE5hbWUiOiJTaGFuZGEiLCJsYXN0TmFtZSI6IlJveSIsInN0YXR1cyI6ImFjdGl2ZSIsImdpdGh1YklkIjpudWxsLCJkaXNjY29yZElkIjpudWxsLCJ1c2VybmFtZSI6bnVsbCwiZGlzcGxheU5hbWUiOm51bGwsInN1YnNjcmlwdGlvbkV4cGlyYXRpb25EYXRlIjpudWxsLCJxdW90YVdpbmRvd1N0YXJ0IjpudWxsLCJjb21wYXJlV2luZG93U3RhcnQiOm51bGwsImlkIjoiYTk5NGIzZGEtZDA4Ny00YWVmLTgzNDQtMjM0NTU1MTIzMDBjIiwib2F1dGhQcm92aWRlcnMiOltdLCJpc1ByZW1pdW0iOiIwIiwic3Vic2NyaXB0aW9uSWQiOiIwIiwic3Vic2NyaXB0aW9uU3RhdHVzIjowLCJwcmVtaXVtTGltaXQiOjAsImZyZWVMaW1pdCI6MCwicXVvdGFVc2VkIjowLCJxdW90YUFkdmFuY2VkVXNlZCI6MCwiY29tcGFyZVVzZWQiOjAsInR3aXR0ZXJJZCI6IiIsImFwcGxlSWQiOiIiLCJkZXZpY2VUb2tlbiI6W10sImNyZWF0ZWRBdCI6IjIwMjYtMDktMjRUMDk6MDU6MzkuNTQwWiIsInVwZGF0ZWRBdCI6IjIwMjYtMDktMjRUMDk6MDU6MzkuNTQwWiJ9LCJpYXQiOjE3OTAyNDA3NDAsImV4cCI6MTc5MjgzMjc0MH0.FtEp3-F_uHySnrx2q27ekf1MRFcihg-_f0FMdR4M-V4"
+          }
+        ],
+        "url": {
+          "raw": "https://api.echogpt.live/v1/chat/delete-all",
+          "protocol": "https",
+          "host": [
+            "api",
+            "echogpt",
+            "live"
+          ],
+          "path": [
+            "v1",
+            "chat",
+            "delete-all"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
