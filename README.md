@@ -132,7 +132,8 @@ This project demonstrates practical experience in **Manual Software Testing and 
 **Kanak Roy Shanda**
 
 GitHub: [Your GitHub Profile](https://github.com/Kanak-Roy)
-
+LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/kanak-roy-shanda-601961238/)
+Email: kanakroyshanda@gmail.com
 ---
 
 ⭐ If you find this project useful, feel free to star the repository.
