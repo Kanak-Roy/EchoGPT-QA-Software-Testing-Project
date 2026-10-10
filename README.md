@@ -126,3 +126,13 @@ Reviewed the application's UI/UX and provided improvement suggestions related to
 ## 👤 QA Contribution
 
 This project demonstrates practical experience in **Manual Software Testing and API Testing**, including test case design, test execution, API testing with Postman, exploratory testing, defect reporting, UI/UX review, and documenting reproducible issues with supporting evidence.
+
+## 👨‍💻 Author
+
+**Kanak Roy Shanda**
+
+GitHub: [Your GitHub Profile](https://github.com/Kanak-Roy)
+
+---
+
+⭐ If you find this project useful, feel free to star the repository.
